@@ -1,0 +1,22 @@
+.MyBtn{
+    cursor: pointer;
+    margin-left: 10px;
+    background-color: #e41c1c;
+    color: #ffffff;
+    border: solid 2px #e41c1c;
+    font-weight: 700;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 20px;
+    transition: 0.3s ease;
+}
+
+.MyBtn:hover{
+    background-color: inherit;
+    color: #e41c1c;
+}
+
+.MyBtn[disabled]{
+    opacity: .7;
+    pointer-events: none;
+}

@@ -1,0 +1,65 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body{
+    height: 100vh;
+    background-color: #ecf2fa;
+}
+
+.App{
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+
+.Todoline{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 24px;
+    padding: 5px;
+    margin: 10px 0;
+    transition: 00.3s ease;
+}
+
+.Todoline:hover{
+    background-color: #0000000a;;
+
+}
+
+.CompleteLine{
+    background-color: #68dd5d;
+}
+
+.CompleteLine:hover{
+    background-color: #63d159;
+}
+
+
+.Todoline button{
+    cursor: pointer;
+    width: 60px;
+    margin-left: 10px;
+    background-color: #e41c1c;
+    color: #ffffff;
+    border: solid 2px #e41c1c;
+    font-weight: 700;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 20px;
+    transition: 0.3s ease;
+}
+
+.Todoline button:hover{
+    background-color: inherit;
+    color: #e41c1c;
+}
+
+
+.none{
+    display: none;
+}

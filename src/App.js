@@ -1,23 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import Todolist from "./components/TodoList";
+import Myform from "./components/MyForm";
+import "./styles/style.css"
 
 function App() {
+  const [TodoItems, setTodoItems] = useState([
+    {TodoText: "Скушоц питсу", id: 1},
+    {TodoText: "Скушоц карыну", id: 2},
+    {TodoText: "Скушоц картоплю", id: 3},
+  ])
+  function createLineTodo(newLine) {
+    setTodoItems([...TodoItems, newLine]);
+  }
+  function removeLineTodo(id) {
+    setTodoItems(TodoItems.filter(p =>p.id !==id));
+  }
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Todolist remove={removeLineTodo} TodoItems={TodoItems}/>
+      <Myform create={createLineTodo}>
+      </Myform>
+      
     </div>
   );
 }
